@@ -6,7 +6,7 @@
   import { useRun } from '../../_hooks'
 
   const prop = defineProps(Props)
-  let timerData = ref('00::00:00')
+  let timerData = ref('00:00:00')
   const timingCallback = (date: timingCallbackProps): void => {
     timerData.value = `${date.hour}:${date.minute}:${date.second}`
     prop.timingCallback && prop.timingCallback(date)
